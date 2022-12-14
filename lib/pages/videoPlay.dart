@@ -1,33 +1,16 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class VideoPlayerApp extends StatelessWidget {
+  const VideoPlayerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    int days = 30;
-    String name = "Flutter App";
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Rick Rolled you bro!!"),
-      ),
-      //   body: Center(
-      //     child: Text(
-      //       " This is a $name",
-      //       style: TextStyle(
-      //         color: Colors.blue,
-      //         fontWeight: FontWeight.bold,
-      //         fontSize: 30,
-      //       ),
-      //     ),
-      //   ),
-      //   ),
-      //   drawer: Drawer(),
-      body: VideoPlayerScreen(),
+    return const MaterialApp(
+      title: 'Video Player Demo',
+      home: VideoPlayerScreen(),
     );
   }
 }
@@ -72,9 +55,9 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('Butterfly Video'),
-      // ),
+      appBar: AppBar(
+        title: const Text('Butterfly Video'),
+      ),
       // Use a FutureBuilder to display a loading spinner while waiting for the
       // VideoPlayerController to finish initializing.
       body: FutureBuilder(
