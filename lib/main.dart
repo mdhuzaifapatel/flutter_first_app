@@ -2,6 +2,7 @@
 
 import 'package:first_app/pages/homePage.dart';
 import 'package:first_app/pages/loginPage.dart';
+import 'package:first_app/pages/videoPlay.dart';
 import 'package:first_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.videoRoute: (context) => VideoPlayerApp(),
       },
     );
   }
